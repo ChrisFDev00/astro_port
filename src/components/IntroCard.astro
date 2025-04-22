@@ -13,40 +13,37 @@ import { Image } from "astro:assets";
       <div class="flex flex-col h-full">
         <h6 class="text-sm font-light m-0 text-gray-500">welcome</h6>
         <p class="m-0 font-light text-xl">
-          Hi, I'm <b class="font-bold">Gianmarco Cavallo</b>, a software
-          developer with strong focus on the user experience, animations and
-          micro interactions
+          Hi, I'm <b class="font-bold">Chris</b>, a software
+          developer who likes solving tangible problems in maintainable ways.
         </p>
+          <br>
+        <p class="m-0 font-light text-xl">
+          When I'm not looking for work I'm likely offering time to OSS projects or volunteer organisations
+          such as <a href="https://codeyourfuture.io" target="_blank" cursor-pointer>CYF</a>.
+          Currently, I'm waiting to hear back from <a href="https://rubyforgood.org/" target="_blank" cursor-pointer>RubyForGood</a>.
+        </p>
+
       </div>
       <div class="flex gap-4">
         <a aria-label="github profile" href={LINKS.github} target="_blank">
           <Button aria-label="github profile">
-            <Icon class="h-6" name="ri:github-fill" />
-            <span class="sr-only">GitHub Profile</span>
+            GitHub
           </Button>
         </a>
         <a aria-label="linkedin profile" href={LINKS.linkedin} target="_blank">
           <Button aria-label="linkedin profile">
-            <Icon class="h-6" name="ri:linkedin-box-fill" />
-            <span class="sr-only">Linkedin Profile</span>
+            LinkedIn
           </Button>
         </a>
-        <a aria-label="dribble profile" href={LINKS.dribble} target="_blank">
+        <a aria-label="dribble profile" href={LINKS.writebook} target="_blank">
           <Button aria-label="dribble profile">
-            <Icon class="h-6" name="ri:dribbble-fill" />
-            <span class="sr-only">Dribble Profile</span>
+            Writebook | Blog
           </Button>
         </a>
-        <Tooltip client:visible>
-          <Button aria-label="easter egg btn">
-            <Icon class="h-6" name="ri:emotion-laugh-line" />
-            <span class="sr-only">Easter egg button</span>
-          </Button>
-        </Tooltip>
       </div>
     </div>
     <Image
-      alt="memoji of gianmarco"       class="w-auto max-h-[300px] select-none absolute right-[-110px] bottom-[-20px] z-[-1] opacity-50 md:opacity-100 md:relative md:right-auto md:bottom-auto md:z-auto pointer-events-none"       height="300"       src="/me.webp"       width="300"
+      alt="robohash of opswole"  class="w-auto max-h-[300px] select-none absolute right-[-110px] bottom-[-20px] z-[-1] opacity-50 md:opacity-100 md:relative md:right-auto md:bottom-auto md:z-auto pointer-events-none"       height="300"       src="/opswole.png"       width="300"
     />
   </div>
 </Card>

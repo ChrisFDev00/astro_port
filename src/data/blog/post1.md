@@ -1,6 +1,6 @@
 ---
-title: "Hello, World"
-description: "this is a post example"
+title: "Erudite"
+description: "University final project"
 pubDate: 2023-01-21
 category: "intro"
 draft: false
