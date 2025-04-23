@@ -60,7 +60,7 @@ const schema =
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width" name="viewport" />
-    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    <!--<link href="/favicon.ico" rel="icon" type="image/x-icon" />-->
     <!--<meta content={Astro.generator} name="generator" />-->
     <title>{title}</title>
     <!--<meta content={description} name="description" />-->
@@ -80,22 +80,22 @@ const schema =
     <!--  name="twitter:image"-->
     <!--/>-->
 
-    <link href="https://cdn.fontshare.com" rel="preconnect" />
-    {
-      page === "travel" && (
-        <link href={`${Astro.url.origin}/travel`} rel="canonical" />
-      )
-    }
-    {
-      page === "blog" && (
-        <link href={`${Astro.url.origin}/blog/${slug}`} rel="canonical" />
-      )
-    }
-    <script
-      is:inline
-      set:html={JSON.stringify(schema)}
-      type="application/ld+json"
-    />
+    <!--<link href="https://cdn.fontshare.com" rel="preconnect" />-->
+    <!--{-->
+    <!--  page === "travel" && (-->
+    <!--    <link href={`${Astro.url.origin}/travel`} rel="canonical" />-->
+    <!--  )-->
+    <!--}-->
+    <!--{-->
+    <!--  page === "blog" && (-->
+    <!--    <link href={`${Astro.url.origin}/blog/${slug}`} rel="canonical" />-->
+    <!--  )-->
+    <!--}-->
+    <!--<script-->
+    <!--  is:inline-->
+    <!--  set:html={JSON.stringify(schema)}-->
+    <!--  type="application/ld+json"-->
+    <!--/>-->
   </head>
   <body
     class="bg-darkslate-700 md:h-screen flex flex-col justify-center items-center"
