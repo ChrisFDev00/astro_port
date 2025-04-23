@@ -45,6 +45,9 @@ builder:
 ssh:
   port: 2222
 
+healthcheck:
+  path: /
+
 # Inject ENV variables into containers (secrets come from .kamal/secrets).
 #
 # env:
