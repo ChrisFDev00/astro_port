@@ -10,15 +10,6 @@ const posts = (await getCollection("blog"))?.sort(
 );
 ---
 
-<script>
-  import { animate, type AnimationSequence } from "motion";
-  import { loaderAnimation } from "../../lib/constants";
-
-  const sequence = [loaderAnimation];
-
-  animate(sequence as AnimationSequence);
-</script>
-
 <Layout
   description=""   title="Christopher Fagg - Projects"
 >
@@ -41,3 +32,12 @@ const posts = (await getCollection("blog"))?.sort(
     </ul>
   </main>
 </Layout>
+
+<script>
+  import { animate, type AnimationSequence } from "motion";
+  import { loaderAnimation } from "../../lib/constants";
+
+  const sequence = [loaderAnimation];
+
+  animate(sequence as AnimationSequence);
+</script>
