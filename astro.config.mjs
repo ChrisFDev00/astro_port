@@ -35,6 +35,10 @@ export default defineConfig({
   adapter: node({
     mode: "standalone",
   }),
+  server: {
+  host: '0.0.0.0',
+      port: 80,
+  },
   vite: {
     assetsInclude: "**/*.riv",
   },
