@@ -13,6 +13,8 @@ const posts = (await getCollection("blog"))?.sort(
     (blogEntryB.data.pubDate || new Date()).getTime() -
     (blogEntryA.data.pubDate || new Date()).getTime()
 );
+
+const projects = (await getCollection("projects"));
 ---
 
 <Layout
@@ -23,12 +25,10 @@ const posts = (await getCollection("blog"))?.sort(
     class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-8 lg:grid-cols-4 lg:gap-4 lg:max-h-[800px]"
   >
     <IntroCard />
-    <AboutMe />
-    <TimeZone />
     <Card
       colSpan="md:col-span-1"
       href="/blog"
-      rowSpan="md:row-span-2 flex gap-1"
+      rowSpan="md:row-span-4 flex gap-1"
       title="Blog"
     >
       <div class="flex flex-col gap-1">
@@ -53,7 +53,36 @@ const posts = (await getCollection("blog"))?.sort(
         }
       </div>
     </Card>
-    <Now />
+    <AboutMe />
+    <Card
+        colSpan="md:col-span-2"
+        href="/projects"
+        rowSpan="md:row-span-4 flex gap-1"
+        title="Projects"
+    >
+      <div class="flex flex-col gap-1">
+        {
+          projects?.slice(0, 3).map((project) => (
+              <div class="list-none w-full text-neutral-100 hover:text-neutral-400 ease-in-out transition-colors border-b-neutral-400 border-dashed border-b-1 my-0">
+                <p class="inline-block whitespace-nowrap text-xs">
+                  {project.data.title}
+                </p>
+                {project.data.pubDate && (
+                    <time
+                        class="text-right tabular-nums text-xs"
+                        data-date={project.data.pubDate.toISOString()}
+                        datetime={project.data.pubDate.toISOString()}
+                    >
+                      {formatDate(project.data.pubDate)}
+                    </time>
+                )}
+              </div>
+              // </a>
+          ))
+        }
+      </div>
+    </Card>
+    <!--<Now />-->
   </main>
 </Layout>
 
